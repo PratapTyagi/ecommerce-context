@@ -38,6 +38,13 @@
   border: none;
   cursor: pointer;
   border-radius: 50%;
+  position: relative;
+}
+
+.header > button > span {
+  position: absolute;
+  right: -60%;
+  color: white;
 }
 
 .header > .dropdown {
@@ -52,11 +59,18 @@
   background-color: whitesmoke;
   color: rgb(66, 65, 65);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(0, 0, 0, 0.3);
+  max-height: 85%;
+  overflow-y: scroll;
+}
+
+.header > .dropdown::-webkit-scrollbar {
+  display: none;
 }
 
 .header > .dropdown > button {
   padding: 10px;
   margin: 10px auto;
+  width: 75%;
   outline: none;
   border: none;
   border-radius: 20px;

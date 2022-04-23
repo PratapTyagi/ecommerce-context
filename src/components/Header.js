@@ -6,7 +6,12 @@ const Header = () => {
   const [isOpen, setisOpen] = useState(false);
   const {
     state: { cart },
+    dispatch,
   } = CartState();
+
+  const removeFromCart = (prod) => {
+    dispatch({ type: "DELETE_FROM_CART", payload: prod });
+  };
 
   return (
     <div className="header">
@@ -25,7 +30,11 @@ const Header = () => {
                 <img src={cartItem.image} alt={cartItem.label} />
                 <span>{cartItem.label ? cartItem.label : cartItem.title}</span>
                 <button>
-                  <FaTrash color="red" fontSize="12px" />
+                  <FaTrash
+                    color="red"
+                    fontSize="12px"
+                    onClick={() => removeFromCart(cartItem)}
+                  />
                 </button>
               </div>
             );
