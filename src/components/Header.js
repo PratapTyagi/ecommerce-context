@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <h3 className="logo">Groffers</h3>
+      <h3 className="logo">TechCart</h3>
       <input type="text" placeholder="Search Item" />
       <button onClick={() => setisOpen(!isOpen)}>
         <FaShoppingCart color="white" fontSize="14px" />

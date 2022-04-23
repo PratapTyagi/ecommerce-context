@@ -5,11 +5,10 @@ const Home = () => {
   const {
     state: { products },
   } = CartState();
-  console.log(products);
   return (
     <div className="home">
       {products.map((prod) => {
-        return <SingleProduct prod={prod} />;
+        return <SingleProduct prod={prod} key={prod.id} />;
       })}
     </div>
   );

@@ -6,14 +6,16 @@ const SingleProduct = ({ prod }) => {
     dispatch,
   } = CartState();
 
-  console.log(cart);
-
   const addToCart = () => {
     dispatch({ type: "ADD_TO_CART", payload: prod });
   };
 
+  const removeFromCart = () => {
+    dispatch({ type: "DELETE_FROM_CART", payload: prod });
+  };
+
   return (
-    <div key={prod.id} className="single_product">
+    <div className="single_product">
       <img
         src={prod.image}
         alt={prod.label ? prod.label : prod.title}
@@ -37,7 +39,9 @@ const SingleProduct = ({ prod }) => {
           {!cart.includes(prod) ? (
             <button onClick={addToCart}>Add To Cart</button>
           ) : (
-            <button className="remove">Remove From Cart</button>
+            <button className="remove" onClick={removeFromCart}>
+              Remove From Cart
+            </button>
           )}
         </div>
       </div>
