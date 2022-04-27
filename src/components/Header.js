@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CartState } from "../context";
 import { FaShoppingCart, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -15,7 +16,13 @@ const Header = () => {
 
   return (
     <div className="header">
-      <h3 className="logo">TechCart</h3>
+      <Link
+        to="/"
+        className="link"
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <h3>TechCart</h3>
+      </Link>
       <input type="text" placeholder="Search Item" />
       <button onClick={() => setisOpen(!isOpen)}>
         <FaShoppingCart color="white" fontSize="14px" />
@@ -40,7 +47,13 @@ const Header = () => {
             );
           })}
 
-          <button>Cart Page</button>
+          <Link
+            to="/cart"
+            className="link"
+            style={{ textDecoration: "none", marginBottom: "8px" }}
+          >
+            <button>Cart Page</button>
+          </Link>
         </div>
       ) : null}
     </div>
