@@ -189,3 +189,59 @@
 .single_product > .description > .submit > .remove:hover {
   background-color: rgb(148, 148, 241);
 }
+
+.cart {
+  height: 90vh;
+  padding: 10px;
+  display: flex;
+}
+
+.cart > .home {
+  flex-wrap: nowrap;
+}
+
+.cart > .filter {
+  padding: 10px;
+  color: whitesmoke;
+  height: 30%;
+  margin: auto 0;
+  text-align: center;
+}
+
+.cart > .cart_items {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart > .cart_items > .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2%;
+  width: 65%;
+}
+
+.cart > .cart_items > .item > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.cart > .cart_items > .item > .right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.cart > .cart_items > .item > button {
+  margin: 0;
+  padding: 1px 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.cart > .cart_items > .item > button:hover {
+  border-bottom: 1px solid red;
+}
